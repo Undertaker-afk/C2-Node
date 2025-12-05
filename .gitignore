@@ -1,0 +1,46 @@
+# Go build artifacts
+bin/
+dist/
+*.o
+*.a
+*.so
+.DS_Store
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/builder
+/stub
+/panel
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.env
+
+# Project specific
+keys/
+logs/
+downloads/
+temp/
+config.yaml
+*.pem
+*.key
