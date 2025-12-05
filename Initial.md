@@ -95,3 +95,7 @@ for connecting from the panel to the agent and use the agent as a vpn server
 - https://github.com/ryogrid/nostrp2p
   better nostr based p2p
 - https://github.com/number571/hidden-lake
+- https://github.com/parazyd/tordam
+  peer announcement hidden behind tor
+- https://github.com/berty/go-libp2p-tor-transport
+  libp2p behind tor
