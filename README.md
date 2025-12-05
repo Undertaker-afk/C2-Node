@@ -16,11 +16,13 @@ A Windows-optimized desktop control interface built with Fyne that allows:
 - **Script Execution**: Execute scripts remotely with output streaming
 - **Clipboard Sync**: Bidirectional clipboard synchronization
 - **Configuration Management**: Bulk device configuration updates
+- **Binary Builder**: GUI tab for cross-compiling binaries with custom options (vanity Tor patterns, version stamping, platform targeting)
 
-**Mandatory 20-Second Splash Screen**: On startup, displays "THIS IS ONLY FOR EDUCATIONAL AND LEGITIMATE PURPOSES" for exactly 20 seconds as an ethical reminder before proceeding to the main interface.
+**Mandatory 20-Second Splash Screen**: On startup, displays "THIS IS ONLY FOR EDUCATIONAL AND LEGITIMATE PURPOSES" for exactly 20 seconds as an ethical reminder before proceeding to the main interface. This screen cannot be skipped and serves as a gatekeeper for authorized use.
 
 ### 2. **Stub Agent** (`cmd/stub/`)
-A lightweight, headless agent that runs on target devices (Windows, Linux, ARM):
+A lightweight, completely headless agent that runs on target devices (Windows, Linux, ARM):
+- **No GUI**: Purely command-line/background service with no graphical interface
 - **Cross-Platform Support**: Compiled for Windows (AMD64), Linux (AMD64), and Linux (ARM for Raspberry Pi)
 - **Persistent Services**: Runs as background service with auto-start on boot
 - **P2P Connectivity**: Joins libp2p swarms with automatic reconnection
@@ -30,14 +32,22 @@ A lightweight, headless agent that runs on target devices (Windows, Linux, ARM):
 - **Remote Execution**: Secure script execution in sandboxed environment
 - **Session Logging**: Comprehensive audit logs for all operations
 - **OTA Updates**: Self-updating capability with secure verification
+- **Minimal Dependencies**: Uses only Go stdlib and specified libraries for portability
 
 ### 3. **Builder Tool** (`cmd/builder/`)
 Cross-compilation utility for generating platform-specific binaries:
-- Compiles panel and stubs for multiple target platforms
-- Embeds Tor onion keys using oniongen-go for persistent addresses
-- Supports vanity onion generation via regex patterns
-- Version stamping and security verification
-- Command-line configurability
+- **Dual Interface**: Available as both standalone CLI tool and integrated GUI tab in panel
+- **Multi-Platform Compilation**: Compiles panel and stubs for multiple target platforms (Windows AMD64, Linux AMD64, Linux ARM)
+- **Tor Key Generation**: Embeds Tor onion keys using oniongen-go for persistent addresses
+- **Vanity Onion Support**: Generates vanity onion addresses matching regex patterns
+- **Version Stamping**: Custom version strings embedded in binaries
+- **Security Verification**: Hash verification and build validation
+- **GUI Features** (in panel):
+  - Build option checkboxes for selective compilation
+  - Custom version and vanity pattern input
+  - Real-time build output display
+  - Build status indicator
+  - Output directory configuration
 
 ## Key Features
 
