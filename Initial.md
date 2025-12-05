@@ -91,5 +91,7 @@ This survey equips the AI engineer with a thorough foundation, ensuring the syst
 
 future plans
 - https://github.com/mehrdadrad/radvpn
+for connecting from the panel to the agent and use the agent as a vpn server
 - https://github.com/ryogrid/nostrp2p
+  better nostr based p2p
 - https://github.com/number571/hidden-lake
