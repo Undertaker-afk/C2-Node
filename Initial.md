@@ -88,3 +88,8 @@ This survey equips the AI engineer with a thorough foundation, ensuring the syst
 
 **Key Citations:**
 - [GitHub - rdkr/oniongen-go: 🔑 v3 .onion vanity URL generator written in Go](https://github.com/rdkr/oniongen-go)
+
+future plans
+- https://github.com/mehrdadrad/radvpn
+- https://github.com/ryogrid/nostrp2p
+- https://github.com/number571/hidden-lake
